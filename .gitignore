@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 /app/src/debug/agconnect-services.json
+/app/agconnect-services.json
+/app/src/release/agconnect-services.json
+/app/keystore.jks
