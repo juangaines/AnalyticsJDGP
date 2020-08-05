@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/report_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/event"
+            app:layout_constraintBottom_toBottomOf="@+id/test_crash"
+            app:layout_constraintEnd_toStartOf="@+id/test_crash"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/test_crash" />
+
+        <Button
+            android:id="@+id/open_pdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_pdf"
+            app:layout_constraintBottom_toBottomOf="@+id/collect_on"
+            app:layout_constraintEnd_toEndOf="@+id/report_event"
+            app:layout_constraintStart_toStartOf="@+id/report_event"
+            app:layout_constraintTop_toTopOf="@+id/collect_on" />
+
+        <Button
+            android:id="@+id/check_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check_out"
+            app:layout_constraintBottom_toBottomOf="@+id/collect_off"
+            app:layout_constraintEnd_toEndOf="@+id/report_event"
+            app:layout_constraintStart_toStartOf="@+id/report_event"
+            app:layout_constraintTop_toTopOf="@+id/collect_off" />
+
+        <Button
+            android:id="@+id/open_pdf_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_activity"
+            app:layout_constraintBottom_toBottomOf="@+id/index_exception"
+            app:layout_constraintEnd_toEndOf="@+id/check_out"
+            app:layout_constraintStart_toStartOf="@+id/check_out"
+            app:layout_constraintTop_toTopOf="@+id/index_exception" />
+
+        <Button
+            android:id="@+id/test_crash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test_crash"
+            app:layout_constraintBottom_toTopOf="@+id/collect_on"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/report_event"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/collect_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/collect_on"
+            app:layout_constraintBottom_toTopOf="@+id/collect_off"
+            app:layout_constraintEnd_toEndOf="@+id/test_crash"
+            app:layout_constraintStart_toStartOf="@+id/test_crash"
+            app:layout_constraintTop_toBottomOf="@+id/test_crash" />
+
+        <Button
+            android:id="@+id/collect_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/collect_off"
+            app:layout_constraintBottom_toTopOf="@+id/index_exception"
+            app:layout_constraintEnd_toEndOf="@+id/test_crash"
+            app:layout_constraintStart_toStartOf="@+id/test_crash"
+            app:layout_constraintTop_toBottomOf="@+id/collect_on" />
+
+        <Button
+            android:id="@+id/index_exception"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/index"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/test_crash"
+            app:layout_constraintStart_toStartOf="@+id/test_crash"
+            app:layout_constraintTop_toBottomOf="@+id/collect_off" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
